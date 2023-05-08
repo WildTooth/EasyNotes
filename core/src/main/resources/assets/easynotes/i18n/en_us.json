@@ -1,7 +1,7 @@
 {
-  "example": {
+  "easynotes": {
     "settings": {
-      "name": "ExampleAddon",
+      "name": "EasyNotes",
       "enabled": {
         "name": "Enabled"
       }
