@@ -5,9 +5,11 @@ import com.github.wildtooth.easynotes.configuration.EasyNotesConfiguration;
 import com.github.wildtooth.easynotes.managers.NoteManager;
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonMain;
+import net.labymod.api.util.I18n;
 
 @AddonMain
 public class EasyNotes extends LabyAddon<EasyNotesConfiguration> {
+  private final String langPath = "easynotes.messages.";
 
   @Override
   protected void enable() {
@@ -15,9 +17,9 @@ public class EasyNotes extends LabyAddon<EasyNotesConfiguration> {
 
     final NoteManager noteManager = new NoteManager();
 
-    this.registerCommand(new NoteCommand(noteManager));
+    this.registerCommand(new NoteCommand(noteManager, langPath));
 
-    this.logger().info("Enabled the Addon");
+    this.logger().info(I18n.translate(langPath + "enabled"));
   }
 
   @Override

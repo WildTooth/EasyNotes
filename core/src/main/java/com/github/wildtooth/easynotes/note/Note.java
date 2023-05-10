@@ -3,7 +3,7 @@ package com.github.wildtooth.easynotes.note;
 public class Note {
   private final String note;
   private final long unix;
-  private final int id;
+  private int id;
 
   public Note(String note, int id) {
     this.note = note;
@@ -23,11 +23,16 @@ public class Note {
     return this.id;
   }
 
+  public void setId(int id) {
+    this.id = id;
+  }
+
   @Override
   public String toString() {
     return "Note{" +
-        "note='" + this.note + '\'' +
-        ", unix=" + this.unix +
+        "note='" + note + '\'' +
+        ", unix=" + unix +
+        ", id=" + id +
         '}';
   }
 }

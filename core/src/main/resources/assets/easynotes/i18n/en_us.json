@@ -5,6 +5,43 @@
       "enabled": {
         "name": "Enabled"
       }
+    },
+    "messages": {
+      "enabled": "EasyNotes enabled",
+      "note": {
+        "displayMessage": "Note [%s]: %s",
+        "displayTotal": "Total notes: %s",
+        "invalid": "A note with that ID does not exist"
+      },
+      "command": {
+        "unknown": "Unknown command. Use /note help for a list of commands",
+        "add": {
+          "usage": "Usage: /note add <text>",
+          "success": "Note added"
+        },
+        "remove": {
+          "usage": "Usage: /note remove <id>",
+          "success": "Note removed"
+        },
+        "view": {
+          "usage": "Usage: /note view [id]"
+        },
+        "help": {
+          "title": "EasyNotes Help",
+          "usage": "Usage: /note help",
+          "commands": {
+            "add": "Add a note",
+            "remove": "Remove a note",
+            "view": "View a note or all notes",
+            "help": "Show this help message"
+          }
+        }
+      },
+      "error": {
+        "stdMessage": "An error occurred processing your request. Please try again later.",
+        "numberFormatException": "Error: %s is not a number!",
+        "invalidNoteException": "Error: %s is not a valid note ID!"
+      }
     }
   }
 }
