@@ -1,6 +1,6 @@
 package com.github.wildtooth.easynotes;
 
-import com.github.wildtooth.easynotes.commands.NoteCommand;
+import com.github.wildtooth.easynotes.commands.note.NoteCommand;
 import com.github.wildtooth.easynotes.configuration.EasyNotesConfiguration;
 import com.github.wildtooth.easynotes.managers.NoteManager;
 import net.labymod.api.addon.LabyAddon;
@@ -9,7 +9,7 @@ import net.labymod.api.util.I18n;
 
 @AddonMain
 public class EasyNotes extends LabyAddon<EasyNotesConfiguration> {
-  private final String langPath = "easynotes.messages.";
+  private static final String langPath = "easynotes.messages.";
 
   @Override
   protected void enable() {
@@ -25,5 +25,9 @@ public class EasyNotes extends LabyAddon<EasyNotesConfiguration> {
   @Override
   protected Class<EasyNotesConfiguration> configurationClass() {
     return EasyNotesConfiguration.class;
+  }
+
+  public static String getLangPath() {
+    return langPath;
   }
 }
