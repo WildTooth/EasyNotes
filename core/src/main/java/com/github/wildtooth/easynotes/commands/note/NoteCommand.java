@@ -6,7 +6,7 @@ import net.labymod.api.client.chat.command.Command;
 import net.labymod.api.util.I18n;
 
 public class NoteCommand extends Command {
-  public NoteCommand(NoteManager noteManager, String langPath) {
+  public NoteCommand(NoteManager noteManager) {
     super("note", "n", "write");
     this.withSubCommand(new NoteViewCommand(noteManager, "view", "v"));
     this.withSubCommand(new NoteAddCommand(noteManager,"add", "a"));

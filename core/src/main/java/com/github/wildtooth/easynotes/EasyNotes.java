@@ -17,7 +17,7 @@ public class EasyNotes extends LabyAddon<EasyNotesConfiguration> {
 
     final NoteManager noteManager = new NoteManager();
 
-    this.registerCommand(new NoteCommand(noteManager, langPath));
+    this.registerCommand(new NoteCommand(noteManager));
 
     this.logger().info(I18n.translate(langPath + "enabled"));
   }
